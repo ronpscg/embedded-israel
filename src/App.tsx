@@ -9,7 +9,7 @@ import { Recordings } from './pages/Recordings';
 
 function App() {
     return (
-        <Router>
+        <Router basename={(import.meta as any).env.BASE_URL}>
             <div className="min-h-screen bg-black text-white selection:bg-primary/30">
                 <Header />
                 <main>
