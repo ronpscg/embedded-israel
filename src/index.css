@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #0a0a0a;
+    --color-foreground: #f3f4f6;
+    --color-primary: #ef4444;
+    --color-secondary: #3b82f6;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-sans);
+    }
+}
+
+/* Custom utilities if needed */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
