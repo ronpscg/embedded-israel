@@ -30,11 +30,12 @@ function TrainingCategory({ icon, title, items }: TrainingCategoryProps) {
 export function Training() {
     return (
         <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h1 className="text-4xl font-bold text-white mb-6">Expert Training</h1>
-                <p className="text-xl text-gray-300">
-                    From Kernel Space to Cyber Security, we offer world-class training for individuals and teams.
-                    Delivered by industry veterans.
+            <div className="text-center max-w-4xl mx-auto mb-16 px-4">
+                <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
+                    Expert Training by <span className="text-gradient-gold">Ron Munitz</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-medium">
+                    Elevate your engineering team with world-class training programs designed and delivered by Ron Munitz and the elite international team at <span className="text-white font-bold">The PSCG</span>.
                 </p>
             </div>
 

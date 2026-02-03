@@ -6,11 +6,13 @@ import { Events } from './pages/Events';
 import { About } from './pages/About';
 import { Training } from './pages/Training';
 import { Recordings } from './pages/Recordings';
+import { CircuitBackground } from './components/CircuitBackground';
 
 function App() {
     return (
         <Router basename={(import.meta as any).env.BASE_URL}>
-            <div className="min-h-screen bg-black text-white selection:bg-primary/30">
+            <CircuitBackground />
+            <div className="relative min-h-screen bg-transparent text-white selection:bg-primary/30">
                 <Header />
                 <main>
                     <Routes>

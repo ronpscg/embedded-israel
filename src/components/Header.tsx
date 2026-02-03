@@ -1,7 +1,7 @@
-import { Menu, X, Cpu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoUrl from '../assets/logo.png';
+import logoNew from '../assets/logo_ei_new.png';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,25 +15,11 @@ export function Header() {
         `block px-3 py-2 text-base font-medium rounded-md ${isActive(path) ? 'text-white bg-white/10' : 'text-gray-300 hover:text-white hover:bg-white/5'}`;
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <header className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-primary/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link to="/" className="flex items-center gap-2">
-                        <div className="h-10 w-auto">
-                            {/* Fallback to text if image fails to load (can handle via onError later, but assuming file exists) */}
-                            <img src={logoUrl} alt="Embedded Israel" className="h-full w-auto object-contain" onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                                e.currentTarget.parentElement?.classList.add('fallback-logo');
-                            }} />
-                            <div className="hidden fallback-logo flex items-center gap-2">
-                                <div className="bg-secondary p-1.5 rounded-sm">
-                                    <Cpu className="w-6 h-6 text-white" />
-                                </div>
-                                <span className="text-xl font-bold tracking-tight text-white">
-                                    EMBEDDED ISRAEL
-                                </span>
-                            </div>
-                        </div>
+                        <img src={logoNew} alt="Embedded Israel" className="h-10 md:h-12 w-auto object-contain" />
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-8">
