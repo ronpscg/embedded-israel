@@ -42,18 +42,18 @@ export function About() {
                     </p>
                 </div>
 
-                <div className="p-10 bg-white shadow-[0_0_50px_rgba(255,255,255,0.15)] rounded-3xl mb-12 flex flex-col md:flex-row items-center gap-10">
-                    <div className="flex-shrink-0 p-4">
+                <div className="p-10 glass-panel border-gold-glow rounded-3xl mb-12 flex flex-col md:flex-row items-center gap-10">
+                    <div className="flex-shrink-0">
                         <img
                             src={logoPscgNew}
                             alt="The PSCG"
-                            className="h-20 md:h-24 w-auto object-contain"
+                            className="h-20 md:h-28 w-auto object-contain brightness-150 contrast-125"
                         />
                     </div>
                     <div>
-                        <h3 className="text-2xl font-black text-black mb-3 uppercase tracking-tighter">Powered by The PSCG</h3>
-                        <p className="text-gray-800 leading-relaxed font-medium">
-                            The community is professionally supported by <span className="font-bold">The Premium Software Consulting Group (PSCG)</span>, Ron Munitz's elite consulting firm. The PSCG is a trusted training partner for industry giants like <span className="font-bold">ARM</span> and <span className="font-bold">The Linux Foundation</span>, providing top-tier professional services and high-end training globally.
+                        <h3 className="text-2xl font-black text-gradient-gold mb-3 uppercase tracking-tighter">Powered by The PSCG</h3>
+                        <p className="text-gray-300 leading-relaxed font-medium">
+                            The community is professionally supported by <span className="text-white font-bold">The Premium Software Consulting Group (PSCG)</span>, Ron Munitz's elite consulting firm. The PSCG is a trusted training partner for industry giants like <span className="text-white font-bold">ARM</span> and <span className="text-white font-bold">The Linux Foundation</span>, providing top-tier professional services and high-end training globally.
                         </p>
                     </div>
                 </div>
