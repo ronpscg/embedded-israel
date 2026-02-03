@@ -1,4 +1,4 @@
-import { Linkedin, Github } from 'lucide-react';
+import { Linkedin, Github, Youtube } from 'lucide-react';
 
 export function Footer() {
     return (
@@ -10,11 +10,29 @@ export function Footer() {
                     </div>
 
                     <div className="flex items-center gap-6">
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                        <a
+                            href="https://www.linkedin.com/in/ronmunitz/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
                             <Linkedin className="w-5 h-5" />
                         </a>
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                        <a
+                            href="https://github.com/ronpscg"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
                             <Github className="w-5 h-5" />
+                        </a>
+                        <a
+                            href="http://www.youtube.com/@ronmunitz?sub_confirmation=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
+                            <Youtube className="w-5 h-5" />
                         </a>
                     </div>
                 </div>
