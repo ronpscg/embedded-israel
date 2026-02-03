@@ -12,28 +12,673 @@ const INITIAL_VIDEOS: Video[] = [
     {
         title: "Native Mobile Botnet & Anti Botnet Solutions - Presented by Ron Munitz",
         videoId: "kmaPtoCOKwM",
-        date: "2023-11-15"
+        date: "2020-03-31"
     },
     {
-        title: "Understanding, Building and Researching Minimal Linux Systems",
+        title: "Understanding, Building and Researching Minimal (and not so minimal) Linux Systems - Ron Munitz",
         videoId: "JtQu3sLMsWk",
-        date: "2023-09-20"
+        date: "2020-04-07"
     },
     {
-        title: "The Yocto Project 10 minute quick-start guide",
+        title: "The Yocto Project 10 minute quick-start guide - Ron Munitz",
         videoId: "jFMK7NCXEiw",
-        date: "2023-08-10"
+        date: "2020-03-23"
     },
     {
-        title: "Yocto Project quick start guide - tips, guidelines and pitfalls",
+        title: "Yocto Project quick start guide - tips, guidelines and pitfalls for your first (remote) build",
         videoId: "CZ2cVtAsBVI",
-        date: "2023-07-05"
+        date: "2020-03-21"
     },
     {
-        title: "Yocto Project quick start - adding an external application",
+        title: "Yocto Project quick start - adding an external application (autotools example)",
         videoId: "fvcdcJMem-0",
-        date: "2023-06-12"
-    }
+        date: "2020-03-22"
+    },
+    {
+        title: "Working with Yocto Project images you built on the cloud/server ,understanding runqemu, and layers",
+        videoId: "OeXVxnnG_Zs",
+        date: "2020-03-25"
+    },
+    {
+        title: "Creating a Yocto Project splash screen (relevant for Linux in general) - part I",
+        videoId: "lqIbu2qzNPo",
+        date: "2020-03-25"
+    },
+    {
+        title: "Creating a Yocto Project splash screen Part II: Recipes and replacing the quick, dirty, and bad way.",
+        videoId: "-ka-cXlbGlc",
+        date: "2020-03-25"
+    },
+    {
+        title: "Creating a Yocto Project Splash screen PartIV: Image header creation, and proper layer organization",
+        videoId: "a_Yc1zWzTWY",
+        date: "2020-03-25"
+    },
+    {
+        title: "[GTUG TLV] Android Rom Cooking - Ron Munitz",
+        videoId: "OEaAxaPaags",
+        date: "2012-08-08"
+    },
+    {
+        title: "Tutorial: X86 ROM Cooking 101 - Android Builders Summit",
+        videoId: "7iLeBD33Fo0",
+        date: "2014-05-28"
+    },
+    {
+        title: "KDB setup on the ancient kernel with a serial line, and an intro to KGDB",
+        videoId: "AayxDTNOEIw",
+        date: "2020-04-05"
+    },
+    {
+        title: "Console types, communicating via a serial line, remote Shell and kernel boot with serial console",
+        videoId: "meQClmBpjTc",
+        date: "2020-04-04"
+    },
+    {
+        title: "KDB setup and kernel debugging - part 2 (breakpoints and memory display on a working kernel)",
+        videoId: "IKZc5dnH79c",
+        date: "2020-04-06"
+    },
+    {
+        title: "KGDB setup and kernel cross-debugging - part 3 (GDB on the host, KGDB on the target)",
+        videoId: "7rsoizSyWaE",
+        date: "2020-04-06"
+    },
+    {
+        title: "Using kdb with a keyboard+display console (no need for serial)  (Part 4 of the series)",
+        videoId: "L33VGhpkYsE",
+        date: "2020-04-07"
+    },
+    {
+        title: "Enabling and using KDB in BeagleBoneBlack (Rev C, but relevant for all revisions [and other boards])",
+        videoId: "2KJqrsnFz8k",
+        date: "2020-04-07"
+    },
+    {
+        title: "RISC-V on Linux, Researching minimal Linux Build Systems, Embedded Virtualization. EmbeddedIsrael#3",
+        videoId: "TXbWV4K7Ttc",
+        date: "2020-04-07"
+    },
+    {
+        title: "Understanding, Building and Researching Minimal (and not so minimal) Linux Systems - Ron Munitz",
+        videoId: "JtQu3sLMsWk",
+        date: "2020-04-07"
+    },
+    {
+        title: "Embedded Israel #4 2020 04 26 at 08 15 GMT 7",
+        videoId: "QYuWpm3zess",
+        date: "2020-04-26"
+    },
+    {
+        title: "Meetup #4 Addendum - Adding (and explaining) to the kernel configs + what is is seen and not in UART",
+        videoId: "uHXuKIiOQfo",
+        date: "2020-04-26"
+    },
+    {
+        title: "Practical Linker Scripts 101 (Embedded Israel Meetup #5 2020 05 03 at 08 30 GMT 7)",
+        videoId: "hTejqS7jVJk",
+        date: "2020-05-03"
+    },
+    {
+        title: "Practical Linker Scripts 101 (Embedded Israel Meetup #5 2020 05 03 at 08 30 GMT 7)",
+        videoId: "hTejqS7jVJk",
+        date: "2020-05-03"
+    },
+    {
+        title: "Linker scripts in the Linux Kernel, Kernel Image structure, and x86 boot sector debugging",
+        videoId: "W4VWFrMRyS8",
+        date: "2020-05-04"
+    },
+    {
+        title: "x86 kernel startup debugging and disassembling - from 0x200 to start_kernel",
+        videoId: "vD7U5cihQPM",
+        date: "2020-05-04"
+    },
+    {
+        title: "ARM early boot debugging (with QEMU and BeagleBoneblack Yocto build)",
+        videoId: "SrogUtGUF8s",
+        date: "2020-05-06"
+    },
+    {
+        title: "Linux Kernel debugging with Visual Studio Code",
+        videoId: "dXhm3Kdnnbg",
+        date: "2020-05-12"
+    },
+    {
+        title: "Linux Kernel debugging with Visual Studio Code",
+        videoId: "dXhm3Kdnnbg",
+        date: "2020-05-12"
+    },
+    {
+        title: "Embedded Israel Meetup #8: 1) Linux Kernel init: filesystems. 2) Checkm8 iOS bootrom exploit",
+        videoId: "6L0IODZ_BVY",
+        date: "2020-08-11"
+    },
+    {
+        title: "Part 5 - on Linux itself",
+        videoId: "THNt8ObsGJQ",
+        date: "2023-01-22"
+    },
+    {
+        title: "Linux on Macbooks - in and out of MacOS (Embedded Israel meeting #9)",
+        videoId: "j5ajUgxmqKU",
+        date: "2023-01-24"
+    },
+    {
+        title: "Building from source and booting your own WSL2 kernel",
+        videoId: "6lqMeg_n7l4",
+        date: "2023-03-23"
+    },
+    {
+        title: "Building e2fsprogs statically [1/2] -  Motivation and simple build explanation (autotool/make)",
+        videoId: "-fyQmTXbSBw",
+        date: "2024-02-01"
+    },
+    {
+        title: "Building dosfstools statically",
+        videoId: "_F7wJxUteCE",
+        date: "2024-02-21"
+    },
+    {
+        title: "x86_64 Ubuntu initramfs to systemd unpacking: Part I: From startup to microcode loading",
+        videoId: "lVYfrV_Qx7c",
+        date: "2024-03-01"
+    },
+    {
+        title: "x86_64 Ubuntu initramfs to systemd unpacking: Part II: unmkinitramfs code review, optimization tips",
+        videoId: "csJ1RJaSzCE",
+        date: "2024-03-01"
+    },
+    {
+        title: "initramfs to systemd unpacking:  Part III: initramfs's init code review, klibc, busybox, kernel",
+        videoId: "5DGMhDw73CM",
+        date: "2024-03-03"
+    },
+    {
+        title: "Embedded Israel #14 - Introduction to Build Systems (video with crowd)",
+        videoId: "4jM7tFfbwos",
+        date: "2024-04-02"
+    },
+    {
+        title: "Embedded Israel #14: Introduction to build systems and PSCGBuildOS preview",
+        videoId: "jIjiaK_G6Fg",
+        date: "2024-04-05"
+    },
+    {
+        title: "PscgBuildOS: Reusing previous builds installables and quickly hooking alpine rootfs into the system",
+        videoId: "WirNfHM9mec",
+        date: "2024-04-05"
+    },
+    {
+        title: "PscgBuildOS: overlay tarballs, read-only rootfs, overlayfs internals, and autocleaning systems",
+        videoId: "gtr3UTin9WQ",
+        date: "2024-04-10"
+    },
+    {
+        title: "PscgBuildOS: Building pscg_alpineos the right way",
+        videoId: "z5knWzLTGt8",
+        date: "2024-04-11"
+    },
+    {
+        title: "Ubuntu on the BeagleV - ahead, live from the Sheraton (haha)",
+        videoId: "4oh1LAkgKkQ",
+        date: "2024-04-20"
+    },
+    {
+        title: "Debootstrapping Embedded Linux Root Filesystems - Building and Optimization for the... - Ron Munitz",
+        videoId: "crHggVmDDVw",
+        date: "2024-04-26"
+    },
+    {
+        title: "EOSS North America 2024 talk addendum - Debootstrapping Ubuntu 24.04 Noble Numbat",
+        videoId: "Y0oifA_Uyf0",
+        date: "2024-08-09"
+    },
+    {
+        title: "A practical introduction to the Zephyr Project - Live from  #embeddedisrael #meetup 16",
+        videoId: "Z1jOj6OD5TI",
+        date: "2024-07-31"
+    },
+    {
+        title: "#embbeddedisrael meetup 17 - The Linux graphics practical talk part 1",
+        videoId: "NQz6VqvtehI",
+        date: "2024-08-15"
+    },
+    {
+        title: "#embbeddedisrael meetup 17 - The Linux graphics practical talk part 2 (Please increase your volume)",
+        videoId: "UfUGd5DMBsg",
+        date: "2024-08-15"
+    },
+    {
+        title: "#embbeddedisrael meetup 17 - The Linux graphics practical talk part 3 - DRI/DRM",
+        videoId: "odmiDUhjrKI",
+        date: "2024-08-15"
+    },
+    {
+        title: "#embeddedisrael meetup 17: Vulkan & GPU Foundations by Vadim Grinshpan ( Staff SW Engineer @ ARM )",
+        videoId: "G7Kg1Qz5b6k",
+        date: "2024-08-15"
+    },
+    {
+        title: "Explaining tradeoffs and sizes when going up from a minimal kernel config (meetup17 prep)",
+        videoId: "99AGKymdwJc",
+        date: "2024-08-17"
+    },
+    {
+        title: "Android-X86 and DRI - another take (motivation) at the graphics talk Part 0",
+        videoId: "-Szwuzn16F4",
+        date: "2024-08-06"
+    },
+    {
+        title: "Android-X86 and DRI - another take (motivation) at the graphics talk - Part 1",
+        videoId: "QwjAH0e2Abg",
+        date: "2024-08-06"
+    },
+    {
+        title: "Android-X86 and DRI - another take (motivation) at the graphics talk Part 2",
+        videoId: "1nzG22bZ7Vs",
+        date: "2024-08-06"
+    },
+    {
+        title: "Android-X86 and DRI - another take (motivation) at the graphics talk - Part 3",
+        videoId: "-ncBcSra1Yw",
+        date: "2024-08-06"
+    },
+    {
+        title: "Meetup 17 addendum: LVGL and uGFX in a debootstrapped Ubuntu 24.04",
+        videoId: "gjjQcTFGTnU",
+        date: "2024-08-09"
+    },
+    {
+        title: "Meetup 17 Addendum: Running Qt without X, troubleshooting 9p, minimal kernel configs and more-Part I",
+        videoId: "Vaatqxvot_c",
+        date: "2024-08-10"
+    },
+    {
+        title: "Meetup 17: From a minimal kernel config to running a Qt app with input and an i915 GPU virtio device",
+        videoId: "80RxW3wlbu0",
+        date: "2024-08-14"
+    },
+    {
+        title: "From Debootstrap to a minimal Wayland/Weston environment running a simple Qt app",
+        videoId: "bb6FjFhDXNg",
+        date: "2024-08-14"
+    },
+    {
+        title: "Adding Gnome (ubuntu-gnome-desktop) and KDE (plasma-dekstop) to our system",
+        videoId: "0l724M3_n74",
+        date: "2024-08-15"
+    },
+    {
+        title: "Package installation: after installing weston, before showing the bluetooth dongle passthrough demo",
+        videoId: "4pMqWBux2Ns",
+        date: "2024-08-14"
+    },
+    {
+        title: "Adding WiFi and Bluetooth support (rtl 8821c in QEMU via USB pass through) and showing Qt+bluetooth",
+        videoId: "_awPfHGyo9Y",
+        date: "2024-08-14"
+    },
+    {
+        title: "Enabling 10\" LVDS in Toradex Easy Installer (Tezi), Verdin i.MX8M Plus",
+        videoId: "AmrEA5NGTiw",
+        date: "2025-04-10"
+    },
+    {
+        title: "Tezi with LVDS addendum - and the file names that will be in the GitHub repository",
+        videoId: "NkumKyMxlmU",
+        date: "2025-04-10"
+    },
+    {
+        title: "Serving a Torizon OS built image to Tezi over the network and installing it",
+        videoId: "4_Px4J5xY78",
+        date: "2025-04-11"
+    },
+    {
+        title: "Tezi - customizing an image for unattended installation (automatic one) and some custom graphics",
+        videoId: "rzL4m6BKssI",
+        date: "2025-04-11"
+    },
+    {
+        title: "Using Wayland and GPU acceleration inside Docker (Host: Ubuntu 24.10, Docker: Ubuntu 25.04)",
+        videoId: "Acc9mAeFjGA",
+        date: "2025-04-18"
+    },
+    {
+        title: "Using electronjs and electronforge inside a docker with wayland",
+        videoId: "v8jUSUhvGwY",
+        date: "2025-04-18"
+    },
+    {
+        title: "Torizon boot time (Weston container, Tauri container) - \"fixing\" Plymouth, no VNC",
+        videoId: "WL0fpI9RUvk",
+        date: "2025-04-27"
+    },
+    {
+        title: "Torizon boot to a VNC enabled screen (same as previous video, but also with VNC",
+        videoId: "N5YrNttWz3A",
+        date: "2025-04-27"
+    },
+    {
+        title: "Torizon - boot to a kmscube container without Weston (flicker), using busybox fbplash on the rootfs.",
+        videoId: "WEB27D3vBwA",
+        date: "2025-04-29"
+    },
+    {
+        title: "Torizon fbsplash/containers/Weston/Tauri flow and glitches examples",
+        videoId: "vMW7HcrtHQM",
+        date: "2025-04-29"
+    },
+    {
+        title: "Toradex - Tezi running from internal flash showing graphics under 10 seconds",
+        videoId: "UJ0hKjHKZsM",
+        date: "2025-04-29"
+    },
+    {
+        title: "Tezi - Toradex Easy Installer full Linux initialization explanation",
+        videoId: "MdZDfwThbPg",
+        date: "2025-04-30"
+    },
+    {
+        title: "Torizon - no flickers - kiosk-shell Weston+ Chromium",
+        videoId: "7Rhswiv0jwM",
+        date: "2025-04-29"
+    },
+    {
+        title: "Torizon Core Builder practical and comprehensive tutorial covering everything but kernel development",
+        videoId: "Lc0Fstwls38",
+        date: "2025-05-01"
+    },
+    {
+        title: "Tezi and Torizon Core Builder: Licenses, Release Notes, and auto installation considerations",
+        videoId: "M_kjWjX33U8",
+        date: "2025-05-01"
+    },
+    {
+        title: "Torizon Core Builder offline builds",
+        videoId: "_d6O4ZCholk",
+        date: "2025-05-01"
+    },
+    {
+        title: "2 Hacking HiSilicon Cameras for   Necessity and hacking several million other devices while at it Ro",
+        videoId: "IKiKk-rJ3LM",
+        date: "2025-01-13"
+    },
+    {
+        title: "#EmbeddedIsrael #21 - The Kexec/Kdump practical talk",
+        videoId: "U-DKdswpVT4",
+        date: "2025-05-26"
+    },
+    {
+        title: "#EmbeddedIsrael #21 - State Persistence over Kexec - Kexec HandOver (KHO)",
+        videoId: "at653wGOfT4",
+        date: "2025-05-26"
+    },
+    {
+        title: "kexec/kdump on an arm64 minimal distro (PscgBuildOS / pscg_busyboxos",
+        videoId: "GKWMN53PxjM",
+        date: "2025-05-27"
+    },
+    {
+        title: "kexec: loading an ubuntu kernel and initramfs on a vanilla Linux kernel 6.15 and busybox  ramdisk",
+        videoId: "4ljjbzHWKIo",
+        date: "2025-05-27"
+    },
+    {
+        title: "Qualcomm Dragonboard unpacking (before removing Android, and making the device Linux)",
+        videoId: "csPkZXOrWhw",
+        date: "2025-07-17"
+    },
+    {
+        title: "Working with Qualcomm Devices:  Android to Linux, QDL, fastboot - gotchas and pitfall",
+        videoId: "hOCkSSQi1MU",
+        date: "2025-07-05"
+    },
+    {
+        title: "Qualcomm: Adding EVDEV to the Linux kernel via the Yocto Project and fixing core-image-weston input",
+        videoId: "laNzDgCHlb0",
+        date: "2025-07-17"
+    },
+    {
+        title: "Qualcomm:  Quickly hacking remote access to your Linux device without being a Yocto Project genius",
+        videoId: "Q-Ijq516adw",
+        date: "2025-07-17"
+    },
+    {
+        title: "Qualcomm:  Short recap of flashing our neatvnc and RDP built core-weston- image",
+        videoId: "amkPayDTP-I",
+        date: "2025-07-18"
+    },
+    {
+        title: "Enabling VNC and RDP   all the changes we did on the Yocto Project itself",
+        videoId: "eXXucIMdFqI",
+        date: "2025-07-18"
+    },
+    {
+        title: "Enabling VNC in Weston - the Yocto Project part",
+        videoId: "TPURq8_R3j4",
+        date: "2025-07-17"
+    },
+    {
+        title: "Yocto Project RDP and VNC when everything is built, weston.ini is unotuched Certificate motivation.",
+        videoId: "2p_nJ2xyeEQ",
+        date: "2025-07-18"
+    },
+    {
+        title: "Qualcomm/Yocto: Setting up TLS certificates and using a standalone Weston VNC and RDP servers",
+        videoId: "ZB7tkViEzbc",
+        date: "2025-07-19"
+    },
+    {
+        title: "Running Weston RDP and VNC inside a chroot to the Yocto Project vanilla rootfs",
+        videoId: "RijI4wjhwwg",
+        date: "2025-07-19"
+    },
+    {
+        title: "Qualcomm:  Enabling screen shares with VNC and RDP both on a real target and in chroot (both Yocto)",
+        videoId: "zGSmL894mUU",
+        date: "2025-07-19"
+    },
+    {
+        title: "Yocto Project: meta-weston-remote and meta-weston-remote-distro - wrapping up VNC and RDP in yocto",
+        videoId: "IGakHmf-aBA",
+        date: "2025-07-23"
+    },
+    {
+        title: "Adding adb support to your Yocto Project build (Qualcomm and almost any other device )",
+        videoId: "R598bWrdjbg",
+        date: "2025-07-24"
+    },
+    {
+        title: "Yocto Project: Using systemd to automatically enable adbd and wlan0 connectivity (All in build time)",
+        videoId: "GGUf4a7IxWw",
+        date: "2025-07-26"
+    },
+    {
+        title: "Qualcomm/Yocto Project: Persisting the kernel configuration changes with a configuration fragment",
+        videoId: "JT6Bws4Xlzw",
+        date: "2025-07-26"
+    },
+    {
+        title: "DevOps for Embedded Development ",
+        videoId: " Mariusz Walczyk",
+        date: "XuG3sur2bsA"
+    },
+    {
+        title: "#embeddedisrael meetup 23 -  DevOps concerns and motivation for Tauri/Rust, Electron, etc. builders",
+        videoId: "mS1U65Qd3G0",
+        date: "2025-07-29"
+    },
+    {
+        title: "PscbBuildOS Debian sid Trixie/Forky for loongarch64,  build caches and reproducible builds (part 1)",
+        videoId: "463KV_AQT0c",
+        date: "2025-08-18"
+    },
+    {
+        title: "PscgBuildOS Understanding caches and troubleshooting between versions with riscv64 (Part 2)",
+        videoId: "rR366koiXDc",
+        date: "2025-08-18"
+    },
+    {
+        title: "PscgBuildOS motivation: Super fast ramdisk rebuilding and testing for complex OTA/recovery scenarios",
+        videoId: "_ZF6qq4unds",
+        date: "2025-08-19"
+    },
+    {
+        title: "PscgBuildOS: First (clean) builds and caching and build structure. Linux kernel 6.17-rc2/busybox",
+        videoId: "K5lwgZVs500",
+        date: "2025-08-19"
+    },
+    {
+        title: "PscgBuildOS: Storage considerations, configuration, troubleshooting and adaptation to rootfs sizes",
+        videoId: "9rqbTzOgONk",
+        date: "2025-08-20"
+    },
+    {
+        title: "PscgBuildOS: Storage considerations addendum   keeping per architecture installer and storage images",
+        videoId: "YJJyjAe74Rk",
+        date: "2025-08-20"
+    },
+    {
+        title: "PscgBuildOS: adding a new architecture (s390x) to various distros. Walkthrough and troubleshooting",
+        videoId: "CYf0ainswdo",
+        date: "2025-08-25"
+    },
+    {
+        title: "PscgBuildOS: Reusing build materials",
+        videoId: "JKlz2s47E9s",
+        date: "2025-09-04"
+    },
+    {
+        title: "Quickly adding hardware to Alpine and QEMU -  RTL8821CU. Part I: WiFi",
+        videoId: "Y6BKlzAHRsM",
+        date: "2025-09-07"
+    },
+    {
+        title: "Quickly adding hardware to Alpine and QEMU -  RTL8821CU. Part II: Bluetooth",
+        videoId: "nxNWKX9sSCA",
+        date: "2025-09-07"
+    },
+    {
+        title: "Adding firmware to the Linux kernel builtin (a.k.a: Quickly adding hardware to Alpine - Part III)",
+        videoId: "WJzppdaqk0Y",
+        date: "2025-09-07"
+    },
+    {
+        title: "PscgBuildOS: the complete modules and firmware what goes where and how (initramfs vs. rootfs) guide",
+        videoId: "Ns-gvGooBrc",
+        date: "2025-09-09"
+    },
+    {
+        title: "PscgBuildOS: Creating, adding, building and testing the 8821cu layer",
+        videoId: "WfoMf0H3Hag",
+        date: "2025-09-10"
+    },
+    {
+        title: "The beginning of another Toradex related series. (the result of patience and determination...)",
+        videoId: "1RjQ_q7eo_E",
+        date: "2025-09-20"
+    },
+    {
+        title: "Mallow board unpacking (iMX8MP): powering up the device when you don't have the right adapter cable",
+        videoId: "6RE3Kr5LLJk",
+        date: "2025-09-20"
+    },
+    {
+        title: "imx8MP on Mallow: connecting to Tezi via USB and VNC",
+        videoId: "CrtpzJFlmcY",
+        date: "2025-09-20"
+    },
+    {
+        title: "imx8MP on Mallow:  installing and booting to a chrome kiosk device",
+        videoId: "HKvGuu15gE8",
+        date: "2025-09-20"
+    },
+    {
+        title: "Unboxing Toradex imx95 EVK",
+        videoId: "gF5eZ6FzOME",
+        date: "2025-09-20"
+    },
+    {
+        title: "OVMF secure boot keys enrollment",
+        videoId: "rf1yviexefY",
+        date: "2025-12-20"
+    },
+    {
+        title: "PscgBuildOS: OTA service initramfs update flow modification: Part 1 -  motivation",
+        videoId: "TsMGX3pX2Pg",
+        date: "2026-01-15"
+    },
+    {
+        title: "PscgBuildOS: OTA service initramfs update flow modification: Part 2 -   initramfs debugging",
+        videoId: "hiYod7Dp_jI",
+        date: "2026-01-15"
+    },
+    {
+        title: "PscgBuildOS: OTA service initramfs update flow modification: Part 3 -    Userspace service debugging",
+        videoId: "Nakch9w-yco",
+        date: "2026-01-15"
+    },
+    {
+        title: "PscgBuildOS: OTA service initramfs update flow modification: Part 4 - fixing ,building & wrapping up",
+        videoId: "tXDdY_-qG7s",
+        date: "2026-01-15"
+    },
+    {
+        title: "AMLogic: eMMC boot partitions wreaking havoc and recovering  where hardware is fine but hope is lost",
+        videoId: "5K7ZHF8bxq4",
+        date: "2026-01-27"
+    },
+    {
+        title: "AMLogic: Replacing the boot chain on s905w/s905x devices with mainline U-boot and Linux (6.19)",
+        videoId: "E4isBhoqOTQ",
+        date: "2026-01-27"
+    },
+    {
+        title: "AMLogic: U-Boot replacement:  Android vendor bootchain and modernized FIP creation scripts explained",
+        videoId: "Ib4Rap7a2yw",
+        date: "2026-01-27"
+    },
+    {
+        title: "PscgBuildOS: AMLogic full A/B OTA flows showcasing: avahi, Debian, Alpine, pscg busyboxos AB updates",
+        videoId: "RsQQCjLLlYs",
+        date: "2026-01-22"
+    },
+    {
+        title: "PscgBuildOS: AMLogic layer integration - a complete guide - Part I - BSP layer",
+        videoId: "qRt59uIHmNM",
+        date: "2026-01-27"
+    },
+    {
+        title: "PscgBuildOS: AMLogic layer integration - a complete guide - Part II - initramfs code",
+        videoId: "BRWwgCquW2E",
+        date: "2026-01-27"
+    },
+    {
+        title: "PscgBuildOS:  Using the Docker based pscg-dockos-richosonly for bullet userspace logic tests",
+        videoId: "LxldSiYjNXA",
+        date: "2026-01-29"
+    },
+    {
+        title: "PscgBuildOS: blazing fast full system control from the initramfs and on with pscg-dockos-rd",
+        videoId: "e28RXdeAgGQ",
+        date: "2026-01-29"
+    },
+    {
+        title: "PscgBuildOS: rewriting pscg alpineos as a cache manages offline buildable distro",
+        videoId: "iBHb7rhtGCk",
+        date: "2026-01-29"
+    },
+    {
+        title: "PscgBuildOS: recapping the AMLogic builds after updating the helper scripts",
+        videoId: "4s4He7ZkDXs",
+        date: "2026-02-01"
+    },
+    {
+        title: "PscgBuildOS: recapping the AMLogic OTA demonstrations after updating the helper scripts",
+        videoId: "0yUFK-mL9wQ",
+        date: "2026-02-01"
+    },
 ];
 
 type SortMode = 'newest' | 'oldest' | 'az' | 'za';
@@ -62,7 +707,7 @@ export function Recordings() {
     };
 
     const handleShuffle = () => {
-        setSortMode('newest'); // Reset sort mode display (optional logic)
+        setSortMode('newest');
         const shuffled = [...videos].sort(() => Math.random() - 0.5);
         setVideos(shuffled);
     };
@@ -120,7 +765,7 @@ export function Recordings() {
                         <Shuffle className="w-4 h-4" />
                         <span>Shuffle</span>
                     </button>
-
+                    
                     <div className="ml-auto text-sm text-gray-500">
                         {videos.length} videos
                     </div>
