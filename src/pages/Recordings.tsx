@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { VideoCard } from '../components/VideoCard';
-import { Shuffle, Calendar, ArrowDownAZ, ArrowUpAZ } from 'lucide-react';
+import { Shuffle, Calendar, ArrowDownAZ, ArrowUpAZ, Hash } from 'lucide-react';
 
 interface Video {
     title: string;
@@ -819,7 +819,12 @@ const INITIAL_VIDEOS: Video[] = [
 type SortMode = 'newest' | 'oldest' | 'az' | 'za' | 'random';
 
 export function Recordings() {
-    const [videos, setVideos] = useState<Video[]>(INITIAL_VIDEOS);
+    // Sort initial videos by newest first for the default state
+    const defaultSortedVideos = useMemo(() => {
+        return [...INITIAL_VIDEOS].sort((a, b) => b.playlistIndex - a.playlistIndex);
+    }, []);
+
+    const [videos, setVideos] = useState<Video[]>(defaultSortedVideos);
     const [sortMode, setSortMode] = useState<SortMode>('newest');
 
     const handleSort = useCallback((mode: SortMode) => {
@@ -828,9 +833,6 @@ export function Recordings() {
             const sorted = [...prev].sort((a, b) => {
                 switch (mode) {
                     case 'newest':
-                        // Assuming higher index means newer in the playlist, 
-                        // but if the playlist is chronological, higher index is usually newer.
-                        // We will sort by playlistIndex descending for "newest".
                         return b.playlistIndex - a.playlistIndex;
                     case 'oldest':
                         return a.playlistIndex - b.playlistIndex;
@@ -868,75 +870,81 @@ export function Recordings() {
                 </p>
 
                 {/* Controls */}
-                <div className="flex flex-wrap items-center gap-4 bg-white/5 p-4 rounded-lg border border-white/10">
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm text-gray-400 font-medium">Sort by:</span>
-                        <div className="flex bg-black/20 rounded-md p-1">
+                <div className="flex flex-wrap items-center gap-6 bg-white/5 p-5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <span className="text-sm text-gray-400 font-medium uppercase tracking-wider">Sort Playlist:</span>
+                        <div className="flex bg-black/40 rounded-lg p-1 border border-white/5">
                             <button
                                 onClick={() => handleSort('newest')}
-                                className={`p-2 rounded transition-colors ${sortMode === 'newest' ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'}`}
-                                title="Playlist Newest"
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 ${sortMode === 'newest' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white hover:bg-white/5'}`}
+                                title="Newest to Oldest"
                             >
                                 <Calendar className="w-4 h-4" />
+                                <span className="text-xs font-semibold">Newest</span>
                             </button>
                             <button
                                 onClick={() => handleSort('oldest')}
-                                className={`p-2 rounded transition-colors ${sortMode === 'oldest' ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'}`}
-                                title="Playlist Oldest"
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 ${sortMode === 'oldest' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white hover:bg-white/5'}`}
+                                title="Oldest to Newest"
                             >
                                 <Calendar className="w-4 h-4 rotate-180" />
+                                <span className="text-xs font-semibold">Oldest</span>
                             </button>
                             <button
                                 onClick={() => handleSort('az')}
-                                className={`p-2 rounded transition-colors ${sortMode === 'az' ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'}`}
-                                title="A-Z"
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 ${sortMode === 'az' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white hover:bg-white/5'}`}
+                                title="A to Z"
                             >
                                 <ArrowDownAZ className="w-4 h-4" />
+                                <span className="text-xs font-semibold">A-Z</span>
                             </button>
                             <button
                                 onClick={() => handleSort('za')}
-                                className={`p-2 rounded transition-colors ${sortMode === 'za' ? 'bg-primary text-white' : 'text-gray-400 hover:text-white'}`}
-                                title="Z-A"
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-md transition-all duration-200 ${sortMode === 'za' ? 'bg-primary text-white shadow-lg' : 'text-gray-400 hover:text-white hover:bg-white/5'}`}
+                                title="Z to A"
                             >
                                 <ArrowUpAZ className="w-4 h-4" />
+                                <span className="text-xs font-semibold">Z-A</span>
                             </button>
                         </div>
                     </div>
 
-                    <div className="h-6 w-px bg-white/10 hidden sm:block" />
+                    <div className="h-10 w-px bg-white/10 hidden sm:block" />
 
                     <button
                         onClick={handleShuffle}
-                        className="flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 text-white transition-colors text-sm font-medium"
+                        className={`flex items-center gap-2 px-5 py-2 rounded-lg border transition-all duration-300 transform active:scale-95 ${sortMode === 'random' ? 'bg-primary/20 border-primary text-primary shadow-[0_0_15px_rgba(234,88,12,0.3)]' : 'bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-white/20'}`}
                     >
-                        <Shuffle className="w-4 h-4" />
-                        <span>Shuffle</span>
+                        <Shuffle className={`w-4 h-4 ${sortMode === 'random' ? 'animate-pulse' : ''}`} />
+                        <span className="text-sm font-bold">Shuffle Deeply</span>
                     </button>
                     
-                    <div className="ml-auto text-sm text-gray-500">
-                        {videos.length} videos
+                    <div className="ml-auto flex items-center gap-2 text-sm">
+                        <Hash className="w-4 h-4 text-primary" />
+                        <span className="text-white font-mono font-bold text-lg">{videos.length}</span>
+                        <span className="text-gray-500 font-medium lowercase tracking-tighter">Talks</span>
                     </div>
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {videos.map((video) => (
                     <VideoCard
-                        key={video.videoId}
+                        key={`${video.videoId}-${video.playlistIndex}`}
                         title={video.title}
                         videoId={video.videoId}
                     />
                 ))}
             </div>
 
-            <div className="mt-16 text-center">
+            <div className="mt-20 text-center">
                 <a
                     href="https://www.youtube.com/watch?v=kmaPtoCOKwM&list=PLBaH8x4hthVysdRTOlg2_8hL6CWCnN5l-"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-white/10 hover:bg-white/20 border border-white/10 rounded-md transition-colors"
+                    className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-orange-600 rounded-full hover:from-orange-600 hover:to-primary transition-all duration-500 shadow-xl shadow-primary/20 hover:shadow-primary/40"
                 >
-                    View Full Playlist on YouTube
+                    View All on YouTube
                 </a>
             </div>
         </div>

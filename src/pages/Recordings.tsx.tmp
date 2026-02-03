@@ -1,0 +1,22 @@
+import { useState, useCallback } from 'react';
+import { VideoCard } from '../components/VideoCard';
+import { Shuffle, Calendar, ArrowDownAZ, ArrowUpAZ, Hash } from 'lucide-react';
+
+interface Video {
+    title: string;
+    videoId: string;
+    date: string;
+    playlistIndex: number;
+}
+
+// Initial videos are Oldest -> Newest (index 0 is oldest)
+const INITIAL_VIDEOS: Video[] = [
+    {
+        title: "Native Mobile Botnet & Anti Botnet Solutions - Presented by Ron Munitz",
+        videoId: "kmaPtoCOKwM",
+        date: "2020-03-31",
+        playlistIndex: 0
+    },
+    // ... (rest of the 135+ videos will be injected or I need to preserve them)
+];
+// I will use a placeholder and then read the full file to avoid data loss.
