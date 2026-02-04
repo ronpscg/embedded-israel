@@ -814,6 +814,12 @@ const INITIAL_VIDEOS: Video[] = [
         date: "2026-02-01",
         playlistIndex: 133
     },
+    {
+        title: "Embedded Israel Meetup #24 - Building and debugging embedded products with Google Antigravity",
+        videoId: "FQtnMkM5ROM",
+        date: "2026-03-01",
+        playlistIndex: 134
+    },
 ];
 
 type SortMode = 'newest' | 'oldest' | 'az' | 'za' | 'random';
@@ -918,7 +924,7 @@ export function Recordings() {
                         <Shuffle className={`w-4 h-4 ${sortMode === 'random' ? 'animate-pulse' : ''}`} />
                         <span className="text-sm font-bold">Shuffle Deeply</span>
                     </button>
-                    
+
                     <div className="ml-auto flex items-center gap-2 text-sm">
                         <Hash className="w-4 h-4 text-primary" />
                         <span className="text-white font-mono font-bold text-lg">{videos.length}</span>
