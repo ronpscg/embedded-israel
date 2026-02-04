@@ -7,12 +7,15 @@ import { About } from './pages/About';
 import { Training } from './pages/Training';
 import { Recordings } from './pages/Recordings';
 import { CircuitBackground } from './components/CircuitBackground';
+import { ChatWidget } from './components/ChatWidget';
+import { HeroGlow } from './components/HeroGlow';
 
 function App() {
     return (
         <Router basename={(import.meta as any).env.BASE_URL}>
             <CircuitBackground />
             <div className="relative min-h-screen bg-transparent text-white selection:bg-primary/30">
+                <HeroGlow />
                 <Header />
                 <main>
                     <Routes>
@@ -24,6 +27,7 @@ function App() {
                     </Routes>
                 </main>
                 <Footer />
+                <ChatWidget />
             </div>
         </Router>
     );
