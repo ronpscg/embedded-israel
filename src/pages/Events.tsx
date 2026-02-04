@@ -15,17 +15,10 @@ export function Events() {
                     </h2>
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         <EventCard
-                            title="Meetup #24: Embedded Debugging 2.0 – The AI Agent Perspective"
-                            date="Feb 3, 2026"
-                            time="9:00 PM IST"
-                            location="Online"
-                            link="https://www.meetup.com/embedded-israel/events/313085402/"
-                        />
-                        <EventCard
                             title="Meetup #19: Hardware and IoT Cybersecurity"
-                            date="Feb 19, 2026"
+                            date="Feb 26, 2026"
                             time="5:30 PM IST"
-                            location="TBA, Tel Aviv-Yafo"
+                            location="Sponsor dependent"
                             link="https://www.meetup.com/embedded-israel/events/306359444/"
                         />
                     </div>
@@ -36,11 +29,11 @@ export function Events() {
                     <h2 className="text-2xl font-bold text-white mb-6">Past Events</h2>
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         <EventCard
-                            title="Embedded Israel Conference 2025"
-                            date="Nov 12, 2025"
-                            location="Tel Aviv"
-                            isPast={true}
-                            link="https://www.meetup.com/embedded-israel/events/308456687/"
+                            title="Meetup #24: Embedded Debugging 2.0 – The AI Agent Perspective"
+                            date="Feb 3, 2026"
+                            time="9:00 PM IST"
+                            location="Online"
+                            link="https://www.meetup.com/embedded-israel/events/313085402/"
                         />
                         <EventCard
                             title="Meetup #23: DevOps for Embedded Developers"
@@ -62,6 +55,20 @@ export function Events() {
                             location="Tel Aviv"
                             isPast={true}
                             link="https://www.meetup.com/embedded-israel/events/307695255/"
+                        />
+                        <EventCard
+                            title="Meetup #17: [Linux] Graphics, Accelerators, Vulkan, and MISRA C"
+                            date="Aug 14, 2024"
+                            location="Tel Aviv"
+                            isPast={true}
+                            link="https://www.meetup.com/embedded-israel/events/302531458/"
+                        />
+                        <EventCard
+                            title="Meetup #16: The first Zephyr Project meetup"
+                            date="Jul 30, 2024"
+                            location="Tel Aviv"
+                            isPast={true}
+                            link="https://www.meetup.com/embedded-israel/events/301753917/"
                         />
                     </div>
                 </section>

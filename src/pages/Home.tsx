@@ -59,11 +59,11 @@ export function Home() {
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl font-bold text-white mb-8 text-center">Next Meetup</h2>
                     <EventCard
-                        title="Meetup #24: Embedded Debugging 2.0 – The AI Agent Perspective"
-                        date="Tuesday, February 3, 2026"
-                        time="9:00 PM IST"
-                        location="Online"
-                        link="https://www.meetup.com/embedded-israel/events/313085402/"
+                        title="Hardware and IoT Cybersecurity"
+                        date="Thursday, February 29, 2026"
+                        time="5:30 PM IST"
+                        location="Sponsor the event and you will decide it. Otherwise - top secret."
+                        link="https://www.meetup.com/embedded-israel/events/306359444/"
                     />
                 </div>
             </section>
