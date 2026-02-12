@@ -15,7 +15,14 @@ export function Events() {
                     </h2>
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         <EventCard
-                            title="Meetup #19: Hardware and IoT Cybersecurity"
+                            title="Meetup #25: World RISC-V Days 2026"
+                            date="Feb 22, 2026"
+                            time="4:30 PM IST"
+                            location="Bar-Ilan University"
+                            link="https://www.meetup.com/embedded-israel/events/313315266"
+                        />
+                        <EventCard
+                            title="Meetup #26: Hardware and IoT Cybersecurity"
                             date="Feb 26, 2026"
                             time="5:30 PM IST"
                             location="Sponsor dependent"

@@ -59,8 +59,15 @@ export function Home() {
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl font-bold text-white mb-8 text-center">Next Meetup</h2>
                     <EventCard
+                        title="World RISC-V Days 2026"
+                        date="Sunday, February 22, 2026"
+                        time="4:30 PM IST"
+                        location="Bar-Ilan University"
+                        link="https://www.meetup.com/embedded-israel/events/313315266"
+                    />
+                    <EventCard
                         title="Hardware and IoT Cybersecurity"
-                        date="Thursday, February 29, 2026"
+                        date="Thursday, February 26, 2026"
                         time="5:30 PM IST"
                         location="Sponsor the event and you will decide it. Otherwise - top secret."
                         link="https://www.meetup.com/embedded-israel/events/306359444/"
